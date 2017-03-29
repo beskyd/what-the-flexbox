@@ -90,5 +90,38 @@ section, footer {
 
 /* This is where the magic Happens */
 @media all and (max-width:500px) {
+  .flex-nav li {
+      flex-basis: 100%;
+  }
   
+  /* Flex Container */
+  .wrapper {
+      display: flex;
+      flex-direction: column;
+  }
+  
+  /* Flex Item */
+  .wrapper > * {
+      order: 9999;
+  }
+  
+  .flex-nav {
+      order: 1;
+  }
+  
+  .toggleNav {
+      display: block;
+  }
+  
+  .flex-nav ul {
+      display: none;
+  }
+  
+  .flex-nav ul.open {
+      display: flex;
+  }
+  
+  .top {
+      order: 2;
+  }
 }
