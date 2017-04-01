@@ -80,3 +80,32 @@ input[type="search"] {
 }
 
 
+@media all and (max-width: 1000px) {
+  .flex-form {
+    flex-direction: column;
+    justify-content: center;
+    width: 500px;
+  }
+  /* unhack them */
+  .flex-form > *:not([type="date"]) {
+    border-top:0;
+    border-bottom:1px solid rgba(0,0,0,0.2);
+  }
+  .flex-form > * {
+    border-right: 0;
+    border-bottom: 1px solid rgba(0,0,0,0.2);
+    flex: 1 1;
+  }  
+  #selectNumber {
+    border-bottom: 0;
+  }
+  input[type="search"] {
+    flex-basis: 14%;
+  }
+}
+
+@media all and (max-width: 600px) {
+  .flex-form {
+    width: 320px;
+  }
+}
